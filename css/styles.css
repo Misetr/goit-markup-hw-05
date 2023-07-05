@@ -85,18 +85,6 @@ img {
 .header-container {
   display: flex;
 }
-.active::after {
-  color: #404bbf;
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  height: 4px;
-  width: 100%;
-  background: #404bbf;
-  border-radius: 2px;
-}
 
 .logo {
   color: var(--color-accent);
@@ -133,7 +121,20 @@ img {
 .header-link:focus {
   color: var(--color-hover-haeder);
 }
-
+.active {
+  color: #404bbf;
+}
+.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #404bbf;
+  border-radius: 2px;
+}
 .header-address {
   font-size: 16px;
   font-style: normal;
