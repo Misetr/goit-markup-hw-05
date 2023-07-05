@@ -1,16 +1,15 @@
 
-document.getElementById("orderButton").addEventListener("click", function() {
-  document.getElementById("modal").style.display = "block";
-});
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector("[data-modal-open]"),
+    closeModalBtn: document.querySelector("[data-modal-close]"),
+    modal: document.querySelector("[data-modal]"),
+  };
 
-// Закрытие модального окна при нажатии на крестик
-document.getElementsByClassName("close")[0].addEventListener("click", function() {
-  document.getElementById("modal").style.display = "none";
-});
+  refs.openModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", toggleModal);
 
-// Закрытие модального окна при клике вне окна
-window.addEventListener("click", function(event) {
-  if (event.target == document.getElementById("modal")) {
-    document.getElementById("modal").style.display = "none";
+  function toggleModal() {
+    refs.modal.classList.toggle("is-hidden");
   }
-});
+})();

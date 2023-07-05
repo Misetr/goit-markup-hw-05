@@ -57,18 +57,11 @@
       <section class="solutions">
         <div class="container">
           <h1 class="solutions-text">Effective Solutions for Your Business</h1>
-          <button type="button" class="solutions-button" id="orderButton">
+          <button type="button" class="solutions-button" data-modal-open>
             Order Service
           </button>
         </div>
       </section>
-
-      <!-- Модальное окно -->
-      <div id="modal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-        </div>
-      </div>
 
       <section class="design">
         <div class="container">
@@ -418,6 +411,13 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div id="modal" class="modal">
+        <button class="modal-content" type="button" data-modal-close>
+          <span class="close">&times;</span>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
